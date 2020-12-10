@@ -1,10 +1,4 @@
-const express = require('express');
-const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => res.send('Hello World!'));
-
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 
 const fs = require('fs');
 const discord = require('discord.js');
@@ -19,7 +13,9 @@ client.config = require('./config/bot.json');
 client.emotes = require('./config/emojis.json');
 client.filters = require('./config/filters.json');
 client.commands = new discord.Collection();
-
+client.on("ready",()=>{
+console.log("I am ready")
+})
 fs.readdir('./events/', (err, files) => {
     if (err) return console.error(err);
     files.forEach(file => {
