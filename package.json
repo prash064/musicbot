@@ -1,0 +1,13 @@
+{
+  "name": "music-bot",
+  "version": "2.0.1",
+  "main": "index.js",
+  "author": "Prashant Dulal",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord-player": "^3.0.3",
+    "discord.js": "^12.5.1",
+    "express": "^4.17.1"
+  }
+}
